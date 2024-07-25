@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import { ThemeProvider } from "@/providers/theme-provider";
 import "./globals.css";
+import ModalProvider from "@/providers/modal-provider";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <ModalProvider>{children}</ModalProvider>
           </ThemeProvider>
         </body>
       </html>
