@@ -13,15 +13,17 @@ datasource db {
 model User {
     id Int @id @default(autoincrement())
 
-    clerkId      String  @unique
-    name         String?
-    email        String  @unique
-    profileImage String?
-    tier         String? @default("Free")
-    credits      String? @default("10")
+    clerkId       String  @unique
+    name          String?
+    email         String  @unique
+    profile_image String?
+    tier          String? @default("Free")
+    credits       String? @default("10")
 
-    createdAt        DateTime @default(now())
-    updatedAt        DateTime @updatedAt
-    localGoogleId    String?  @unique
-    googleResourceId String?  @unique
+    created_at         DateTime @default(now())
+    updated_at         DateTime @updatedAt
+    local_google_id    String?  @unique
+    google_resource_id String?  @unique
+
+    @@map("users")
 }
