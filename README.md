@@ -4,17 +4,13 @@ Formflow.ai is a platform that allows users to create and manage form flows.
 
 ## Tech Stack
 
-- Next.js
-- Prisma
-- PostgreSQL
-- Tailwind CSS
+- Next.js - Frontend
+- ClerkJS - Authentication
+- Prisma - ORM
+- PostgreSQL - Database
+- Tailwind CSS - Styling
 
 ## Development
-
-### Prerequisites
-
-- Node.js
-- PostgreSQL
 
 ### Setup
 
