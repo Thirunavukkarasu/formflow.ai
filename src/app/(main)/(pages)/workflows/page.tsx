@@ -1,5 +1,6 @@
 import React from "react";
 import WorkflowButton from "./_components/workflow-button";
+import Workflows from "./_components";
 
 export default function WorkflowsPage() {
   return (
@@ -8,6 +9,7 @@ export default function WorkflowsPage() {
         Workflows
         <WorkflowButton />
       </h1>
+      <Workflows />
     </div>
   );
 }

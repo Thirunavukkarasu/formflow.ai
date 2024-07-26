@@ -12,83 +12,49 @@ export const clients = [...new Array(10)].map((client, index) => ({
     href: `/${index + 1}.png`,
 }))
 
-export const products = [
-    {
-        title: 'Moonbeam',
-        link: 'https://gomoonbeam.com',
-        thumbnail: '/p1.png',
-    },
-    {
-        title: 'Cursor',
-        link: 'https://cursor.so',
-        thumbnail: '/p2.png',
-    },
-    {
-        title: 'Rogue',
-        link: 'https://userogue.com',
-        thumbnail: '/p3.png',
-    },
+export const products = []
 
-    {
-        title: 'Editorially',
-        link: 'https://editorially.org',
-        thumbnail: '/p4.png',
+export const CardTypes = {
+    email: { description: "Send and email to a user", type: "action" },
+    condition: {
+        description: "Boolean operator that creates different conditions lanes.",
+        type: "action",
     },
-    {
-        title: 'Editrix AI',
-        link: 'https://editrix.ai',
-        thumbnail: '/p5.png',
+    ai: {
+        description:
+            "Use the power of AI to summarize, respond, create and much more.",
+        type: "action",
     },
-    {
-        title: 'Pixel Perfect',
-        link: 'https://app.pixelperfect.quest',
-        thumbnail: '/p6.png',
+    slack: { description: "Send a notification to slack", type: "action" },
+    google_drive: {
+        description:
+            "Connect with Google drive to trigger actions or to create files and folders.",
+        type: "trigger",
     },
-
-    {
-        title: 'Algochurn',
-        link: 'https://algochurn.com',
-        thumbnail: '/p1.png',
+    notion: { description: "Create entries directly in notion.", type: "action" },
+    custom_webhook: {
+        description:
+            "Connect any app that has an API key and send data to your applicaiton.",
+        type: "action",
     },
-    {
-        title: 'Aceternity UI',
-        link: 'https://ui.aceternity.com',
-        thumbnail: '/p2.png',
+    discord: {
+        description: "Post messages to your discord server",
+        type: "action",
     },
-    {
-        title: 'Tailwind Master Kit',
-        link: 'https://tailwindmasterkit.com',
-        thumbnail: '/p3.png',
+    google_calendar: {
+        description: "Create a calendar invite.",
+        type: "action",
     },
-    {
-        title: 'SmartBridge',
-        link: 'https://smartbridgetech.com',
-        thumbnail: '/p4.png',
+    trigger: {
+        description: "An event that starts the workflow.",
+        type: "trigger",
     },
-    {
-        title: 'Renderwork Studio',
-        link: 'https://renderwork.studio',
-        thumbnail: '/p5.png',
+    action: {
+        description: "An event that happens after the workflow begins",
+        type: "action",
     },
-
-    {
-        title: 'Creme Digital',
-        link: 'https://cremedigital.com',
-        thumbnail: '/p6.png',
+    wait: {
+        description: "Delay the next action step by using the wait timer.",
+        type: "action",
     },
-    {
-        title: 'Golden Bells Academy',
-        link: 'https://goldenbellsacademy.com',
-        thumbnail: '/p1.png',
-    },
-    {
-        title: 'Invoker Labs',
-        link: 'https://invoker.lol',
-        thumbnail: '/p2.png',
-    },
-    {
-        title: 'E Free Invoice',
-        link: 'https://efreeinvoice.com',
-        thumbnail: '/p3.png',
-    },
-]
+};

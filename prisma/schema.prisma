@@ -13,17 +13,33 @@ datasource db {
 model User {
     id Int @id @default(autoincrement())
 
-    clerkId       String  @unique
+    clerk_id      String  @unique
     name          String?
     email         String  @unique
     profile_image String?
     tier          String? @default("Free")
     credits       String? @default("10")
 
-    created_at         DateTime @default(now())
-    updated_at         DateTime @updatedAt
-    local_google_id    String?  @unique
-    google_resource_id String?  @unique
+    created_at         DateTime    @default(now())
+    updated_at         DateTime    @updatedAt
+    local_google_id    String?     @unique
+    google_resource_id String?     @unique
+    workflows          Workflows[]
 
     @@map("users")
+}
+
+model Workflows {
+    id          String   @id @default(uuid())
+    nodes       String?
+    edges       String?
+    name        String
+    flow_path   String?
+    cron_path   String?
+    publish     Boolean? @default(false)
+    description String
+    user        User     @relation(fields: [user_id], references: [clerk_id])
+    user_id     String
+
+    @@map("workflows")
 }

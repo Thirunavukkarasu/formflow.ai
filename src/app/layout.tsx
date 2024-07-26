@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
+
 import { ThemeProvider } from "@/providers/theme-provider";
-import "./globals.css";
 import ModalProvider from "@/providers/modal-provider";
+
+import "./globals.css";
+import "@xyflow/react/dist/style.css";
 
 const font = Inter({ subsets: ["latin"] });
 

@@ -51,3 +51,45 @@ npx prisma migrate dev
 ```
  npx prisma migrate dev --name <migration-name>
 ```
+
+2. Run the migration
+
+```
+npx prisma migrate dev
+```
+
+3. Reset the database
+
+```
+npx prisma migrate reset
+```
+
+4. Generate Prisma Client
+
+```
+npx prisma generate
+```
+
+## Start the development server
+
+```
+npm run dev
+```
+
+## Deployment
+
+1. Create a new production build
+
+```
+npm run build
+```
+
+2. Start the production server
+
+```
+npm start
+```
+
+## License
+
+MIT
